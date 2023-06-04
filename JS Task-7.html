@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task-7</title>
+    <style>
+        button{
+            margin-left:30px;
+            width:100px;
+            height:30px;
+        }
+    </style>
+</head>
+<body>
+    <h3>JS Task-7</h3>
+    <label>Enter first number: </label>
+    <input type="text" id="a"/><br><br>
+    <label>Enter second number: </label>
+    <input type="text" id="b"/><br><br>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+    <br><br>
+    <p id="result"></p>
+    <script>
+        function multiply()
+        {
+            var a=parseFloat(document.getElementById("a").value);
+            var b=parseFloat(document.getElementById("b").value);
+            var multiply=a*b;
+            document.getElementById("result").innerHTML="Result: "+multiply;
+        }
+        function divide()
+        {
+            var a=parseFloat(document.getElementById("a").value);
+            var b=parseFloat(document.getElementById("b").value);
+            var divide=a/b;
+            document.getElementById("result").innerHTML="Result: "+divide;
+        }
+    </script>
+</body>
+</html>

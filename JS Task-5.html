@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task-5</title>
+    <style>
+        #reverse{
+                margin-left:40px;
+                height:30px;
+                width:200px;
+            }
+    </style>
+</head>
+<body>
+    <h3>JS Task-5</h3>
+    <label>Enter number:</label>
+        <input type="text" id="num"/><br><br>
+        <button id="reverse" onclick="rev()">Reverse the number</button>
+        <p id="revnum"></p>
+        <script>
+            function rev(){
+                var num =document.getElementById("num").value;
+                var revnum =parseInt(num.toString().split('').reverse().join(''));
+                document.getElementById("revnum").textContent="Reversed Number: "+revnum;
+            }
+        </script>
+</body>
+</html>

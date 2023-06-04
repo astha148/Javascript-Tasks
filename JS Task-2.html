@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task-2</title>
+    <style>
+        .button{
+            margin-left:30px;
+            width:100px;
+            height:30px;
+        }
+        #page1{
+            margin-left:60px;
+        }
+        #page2{
+            margin-left:88px;
+        }
+        #page3{
+            margin-left:89px;
+        }
+    </style>
+</head>
+<body>
+    <h3>JS Task-2</h3>
+    <label id="page1">Page 1</label>
+    <label id="page2">Page 2</label>
+    <label id="page3">Page 3</label><br><br>
+    <button onclick="previouspage()" class="button">Previous Page</button>
+    <button onclick="recentpage()" class="button">Recent Page</button>
+    <button onclick="nextpage()" class="button">Next Page</button>
+    <script>
+        function previouspage(){
+            window.history.previouspage();
+        }
+        function recentpage(){
+            window.history.recentpage();
+        }
+        function nextpage(){
+            window.history.forward();
+        }
+    </script>
+</body>
+</html>

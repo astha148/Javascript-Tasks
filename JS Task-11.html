@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task-11</title>
+    <style>
+        #task11{
+            background:linear-gradient(to bottom, rgb(248, 248, 154), rgb(250, 79, 173));
+            padding: 20px;
+            width:500px;
+        }
+        #fname{
+            margin-left:60px;
+            width:250px;
+        }
+        #lname{
+            margin-left:62px;
+            width:250px;
+        }
+        #Email{
+            margin-left:95px;
+            width:250px;
+        }
+        #password{
+            margin-left:72px;
+            width:250px;
+        }
+        #repass{
+            margin-left:13px;
+            width:250px;
+        }
+        .male{
+            margin-left:88px;
+        }
+        .female{
+            margin-left:139px;
+        }
+        #age{
+            margin-left:108px;
+            width:250px;
+        }
+        #phoneno{
+            margin-left:38px;
+            width:250px;
+        }
+        #address{
+            margin-left:138px;
+            width:250px;
+            height:80px;
+        }
+        #state{
+            margin-left:103px;
+            width:250px;
+        }
+        #country{
+            margin-left:82px;
+        }
+        .language{
+            margin-left:20px;
+        }
+        #link{
+            margin-left:250px;
+        }
+        #reg{
+            color:white;
+            background:red;
+            border-radius:50px;
+            width:100px;
+            height:30px;
+            margin-left:190px;
+        }
+    </style>
+</head>
+<body>
+    <h3>JS Task-11</h3>
+    <form id="task11">
+        <h2 style="color:blue;"><center>Registration Form</center></h2>
+        <label>First Name</label>
+        <input type="text" id="fname" required/>
+        <span id="fnameerr" style="color:red;"></span><br><br>
+        <label>Last Name</label>
+        <input type="text" id="lname" required/>
+        <span id="lnameerr" style="color:red;"></span><br><br>
+        <label>Email</label>
+        <input type="email" id="Email" required/>
+        <span id="emailerr" style="color:red;"></span><br><br>
+        <label>Password</label>
+        <input type="password" id="password"required/>
+        <span id="passworderr" style="color:red;"></span><br><br>
+        <label>Re-enter Password</label>
+        <input type="password" id="repass"required/>
+        <span id="repasserr" style="color:red;"></span><br><br>
+        <label>Gender</label>
+        <input type="radio" class="male" checked/> Male<br><br>
+        <input type="radio" class="female"/> Female<br><br>
+        <label>Age</label>
+        <input type="text" id="age" required/>
+        <span id="ageerr" style="color:red;"></span><br><br>
+        <label>Phone Number</label>
+        <input type="text" id="phoneno" required/>
+        <span id="phoneerr" style="color:red;"></span><br><br>
+        <label>Address</label><br>
+        <textarea id="address" required></textarea>
+        <span id="addresserr" style="color:red;"></span><br><br>
+        <label>State</label>
+        <input type="text" id="state" required/>
+        <span id="stateerr" style="color:red;"></span><br><br>
+        <label>Country</label>
+        <select id="country">
+            <option>Choose your Country</option>
+            <option>India</option>
+            <option>Australia</option>
+            <option>Canada</option>
+            <option>USA</option>
+            <option>Bangladesh</option>
+            <option>China</option>
+        </select><br><br>
+        <label>Languages known</label>
+        <input type="checkbox" class="language">English</input>
+        <input type="checkbox" class="language">Kannada</input>
+        <input type="checkbox" class="language">Hindi</input>
+        <input type="checkbox" class="language">Telugu</input><br><br>
+        <input type="checkbox" id="declaration" checked/> Hereby I declare all the given details are true<br>
+        <p id="link">Log in to <a href="https://ethnus.com" alt="Ethnus" target="_blank">Ethnus</a> website</p>
+        <button id="reg" onclick="inputerror()">Register</button>
+        <script>
+            function inputerror(){
+                var fname=document.getElementById("fname").value;
+                var lname=document.getElementById("lname").value;
+                var email=document.getElementById("Email").value;
+                var password=document.getElementById("password").value;
+                var repass=document.getElementById("repass").value;
+                var age=document.getElementById("age").value;
+                var phoneno=document.getElementById("phoneno").value;
+                var address=document.getElementById("address").value;
+                var state=document.getElementById("state").value;
+                if (fname===""){
+                    document.getElementById("fnameerr").textContent="POOR";
+                }
+                if (lname===''){
+                    document.getElementById("lnameerr").textContent="POOR";
+                    
+                }
+                if (email===''){
+                    document.getElementById("emailerr").textContent="POOR";
+                }
+                if (password===''){
+                    document.getElementById("passworderr").textContent="POOR";
+                }
+                if (repass===''){
+                    document.getElementById("repasserr").textContent="POOR";
+                }
+                if (password!==repass){
+                    document.getElementById("repasserr").textContent="MISMATCH";
+                }
+                if (age===''){
+                    document.getElementById("ageerr").textContent="POOR";
+                }
+                if (phoneno===''){
+                    document.getElementById("phoneerr").textContent="POOR";
+                }
+                if (address==='') {
+                    document.getElementById("addresserr").textContent="POOR";
+                }
+                if (state==='') {
+                    document.getElementById("stateerr").textContent="POOR";
+                }
+            }
+        </script>
+</body>
+</html>

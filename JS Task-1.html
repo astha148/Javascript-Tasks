@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task-1</title>
+    <style>
+        .date,.time{
+                width:100px;
+                height:30px;
+                font-size:medium;
+            }
+    </style>
+</head>
+<body>
+    <h3>JS Task-1</h3>
+    <button class="date" onclick="showdate()">Show Date</button>
+        <p id="dispdate"></p>
+        <script>
+            function showdate()
+            {
+                var date= new Date();
+                var currentdate=date.toDateString();
+                document.getElementById('dispdate').textContent=currentdate;
+            }
+        </script>
+        <button class="time" onclick="showtime()">Show Time</button>
+        <p id="disptime"></p>
+        <script>
+            function showtime(){
+                var time=new Date();
+                var currentdate=time.toDateString();
+                var currenttime=time.toTimeString();
+                document.getElementById('disptime').textContent=currentdate+" "+currenttime;
+            }
+        </script>
+</body>
+</html>

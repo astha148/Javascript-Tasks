@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task-6</title>
+</head>
+<body>
+    <h3>JS Task-6</h3>
+    <p>Given String: Internship</p>
+        <p id="sortedstr"></p>
+        <script>
+            function sortstr(str){
+                return str.split('').sort().join('');
+            }
+            var str="Internship";
+            document.getElementById("sortedstr").textContent="Sorted String: "+sortstr(str);
+        </script>
+</body>
+</html>

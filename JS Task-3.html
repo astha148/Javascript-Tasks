@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task-3</title>
+    <style>
+        #task3{
+                margin-left:100px;
+            }
+            .message{
+                margin-left:78px;
+                width:139px;
+                height:40px;
+            }
+            #submit{
+                margin-left:80px;
+                height:30px;
+                width:60px;
+            }
+            input{
+                margin-left:30px;
+            }
+            .website{
+                margin-left:18px;
+            }
+            #err1,#err2,#err3,#err4{
+                color:red;
+                font-style:italic;
+            }
+    </style>
+</head>
+<body>
+    <h3>JS Task-3</h3>
+    <div class="task3">
+        <form id="task3">
+                <label>Name:</label>
+                <input type="text" class="name" id="name" required/>
+                <span id="err1"></span><br><br>
+                <label>Email:</label>
+                <input type="email" class="email" id="email" required/>
+                <span id="err2"></span><br><br>
+                <label>Website:</label>
+                <input type="text" class="website" id="website" required/>
+                <span id="err3"></span><br><br>
+                <label class="msg">Message:</label><br>
+                <textarea class="message" id="message"></textarea>
+                <span id="err4"></span><br><br>
+                <button id="submit" onclick="error()">Submit</button>
+                <script>
+                    function error(){
+                        var name=document.getElementById("name");
+                        if(name.value.trim()==="")
+                        {
+                            name.style.border="2px solid red";
+                            document.getElementById("err1").textContent="This field is required";
+                        }
+                        else
+                        {
+                            name.style.border="";
+                        }
+
+                        var message=document.getElementById("message");
+                        if(message.value.trim()==="")
+                        {
+                            message.style.border = "2px solid red";
+                            document.getElementById("err4").textContent="This field is required";
+                        }
+                        else
+                        {
+                            message.style.border="";
+                        }
+
+                        var email=document.getElementById("email");
+                        if(email.value.trim()==="")
+                        {
+                            email.style.border="2px solid red";
+                            document.getElementById("err2").textContent="A vaild email address is required";
+                        }
+                        else{
+                            message.style.border="";
+                        }
+
+                        var website=document.getElementById("website");
+                        if(website.value.trim()==="")
+                        {
+                            website.style.border="2px solid red";
+                            document.getElementById("err3").textContent="A vaild url is required";
+                        }
+                    }
+                </script>
+        </form>
+    </div>
+</body>
+</html>
